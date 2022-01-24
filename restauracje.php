@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+
+
+ ?>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +28,7 @@
                 <ul id="wlasciwe_gorne_menu">
                   <li style="border-left: 1px solid black;"> <a href="logowanie.php"><span class="link"></span>Logowanie</a></li>
                   <li> <a href="rejestracja.php"><span class="link"></span>Rejestracja</a></li>
-                  <li> <a href="profile.php"><span class="link"></span>Konto</a></li>
+                  <li> <a href="profile.html"><span class="link"></span>Konto</a></li>
 
                 </ul>
             </div>
@@ -75,44 +81,21 @@
     <div id="zawartosc">
         <div id="gorna_czesc_zawartosci"></div>
         <div id="srodkowa_czesc_zawartosci">
-            <div id="menu">
-               <h1> MO.BAR</h1>
-                 <h1>Menu</h1>
+            <div id="tekst">
+               <h1> Zamów szybko i wygodnie ulubione jedzenie z dowozem na alepysznee.pl</h1>
 
-                <p><b>MO.KACZKA</b></p>
-                <p>burger z szarpaną piersią kaczki, orientalną sałatką, sosem hoisin, majonezem limonkowym, piklowanym zielonym ogórkiem, piklowaną rzodkiewką i szczypiorkiem - 37 PLN</p>
-                <form action="zamowienia.php" method="post">
-                    <input type="checkbox" name="burger" value="wartość">Zaznacz to danie
-                </br>
-                <p>PISTOU</p>
-                <p>wiosenna francuska zupa z sezonowymi warzywami, makaronem, bazyliowym sosem pistou i parmezanem - 24 PLN</p>
-                <input action="zamowienia.php" method="post">
-                    <input type="checkbox" name="zupa" value="wartość">Zaznacz to danie
-                </br>
-                <p>Frytki z batatów - 30 PLN</p></br>
-                <input action="zamowienia.php" method="post">
-                    <input action="zamowienia.php" method="post">
-                        <input type="checkbox" name="frytki" value="wartość">Zaznacz to danie
-                    </br>
-                    <p>Oceń restauracje:</p></br>
-                    <p>Wpisz cyfre od 1 -5 gdzie 1 to ocena słaba 5 znakomita</p>
-                        <body>
-                            <body style="background-color:white">
-                                <input action="zamowienia.php" method="post">
-                                <fieldset>
-                                  <input class="submit_button" type="submit" value="Zapisz" />
+                <p> Wybierz restauracje </p>
 
-                        <label for="danie-id">Danie:</label>
-                        <input type="number" size="2" name="ocena" id="danie" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="obsługa-id">Obsługa:</label>
-                        <input type="number" size="2" name="ocena" id="obsługa-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="dostawa-id">Czas dostawy:</label>
-                        <input type="number" size="2" name="ocena" id="dostawa-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="ocena-id">Aktualna ocena użytkowników wynosi:</label>
-                        <input type="number" size="2" name="ocena" id="ocena-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <input class="submit_button" type="submit" value="Zapisz" />
+                <p> <a href="mobar.html">MO.BAR Food & Drinks</a>
+                    ul. Wroniecka 18, 61-763 Poznań  </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.820074731025!2d16.931996915364472!3d52.40993705213324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b47312064a7%3A0x485385ae77a8d588!2sMO.BAR%20%2F%20Pozna%C5%84!5e0!3m2!1sen!2spl!4v1624666925545!5m2!1sen!2spl" width="80%" height="80%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-                        </form>
+                <p>  <a href="ratuszova.html">Ratuszova Restaurant A.D. </a>Stary Rynek 55, Poznan 61-772 </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77937.51420721834!2d16.826725141991687!3d52.37862780162557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b3f51f2176b%3A0x99ef80d597a26e3f!2sRestauracja%20Ratuszova%20A.D.%201954!5e0!3m2!1sen!2spl!4v1624666827101!5m2!1sen!2spl" width="80%" height="80%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                <p>  <a href="whisky.html">Whiskey in the Jar</a>Stary Rynek 100, Poznan 61-772 </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.882001456767!2d16.932473115364363!3d52.40881475221621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b3f51e1e065%3A0x6cedc03a7afb8ba5!2sWhiskey%20in%20the%20Jar!5e0!3m2!1sen!2spl!4v1624666971213!5m2!1sen!2spl" width="80%" height="80%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
             </div>
         </div>
         <!-- koniec div srodkowa czesc zawartosci -->

@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start()
+
+
+ ?>
+
+
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +29,7 @@
                 <ul id="wlasciwe_gorne_menu">
                   <li style="border-left: 1px solid black;"> <a href="logowanie.php"><span class="link"></span>Logowanie</a></li>
                   <li> <a href="rejestracja.php"><span class="link"></span>Rejestracja</a></li>
-                  <li> <a href="profile.php"><span class="link"></span>Konto</a></li>
+                  <li> <a href="profile.html"><span class="link"></span>Konto</a></li>
 
                 </ul>
             </div>
@@ -72,56 +79,43 @@
             </ul>
         </div>
     <!-- Koniec div srodkowe menu-->
+
+
+
     <div id="zawartosc">
         <div id="gorna_czesc_zawartosci"></div>
         <div id="srodkowa_czesc_zawartosci">
-            <div id="menu">
-               <h1> MO.BAR</h1>
-                 <h1>Menu</h1>
+            <div id="tekst">
 
-                <p><b>MO.KACZKA</b></p>
-                <p>burger z szarpaną piersią kaczki, orientalną sałatką, sosem hoisin, majonezem limonkowym, piklowanym zielonym ogórkiem, piklowaną rzodkiewką i szczypiorkiem - 37 PLN</p>
-                <form action="zamowienia.php" method="post">
-                    <input type="checkbox" name="burger" value="wartość">Zaznacz to danie
-                </br>
-                <p>PISTOU</p>
-                <p>wiosenna francuska zupa z sezonowymi warzywami, makaronem, bazyliowym sosem pistou i parmezanem - 24 PLN</p>
-                <input action="zamowienia.php" method="post">
-                    <input type="checkbox" name="zupa" value="wartość">Zaznacz to danie
-                </br>
-                <p>Frytki z batatów - 30 PLN</p></br>
-                <input action="zamowienia.php" method="post">
-                    <input action="zamowienia.php" method="post">
-                        <input type="checkbox" name="frytki" value="wartość">Zaznacz to danie
-                    </br>
-                    <p>Oceń restauracje:</p></br>
-                    <p>Wpisz cyfre od 1 -5 gdzie 1 to ocena słaba 5 znakomita</p>
-                        <body>
-                            <body style="background-color:white">
-                                <input action="zamowienia.php" method="post">
-                                <fieldset>
-                                  <input class="submit_button" type="submit" value="Zapisz" />
 
-                        <label for="danie-id">Danie:</label>
-                        <input type="number" size="2" name="ocena" id="danie" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="obsługa-id">Obsługa:</label>
-                        <input type="number" size="2" name="ocena" id="obsługa-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="dostawa-id">Czas dostawy:</label>
-                        <input type="number" size="2" name="ocena" id="dostawa-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="ocena-id">Aktualna ocena użytkowników wynosi:</label>
-                        <input type="number" size="2" name="ocena" id="ocena-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <input class="submit_button" type="submit" value="Zapisz" />
 
-                        </form>
+
+
+
+				<form action="restauracje.php" method="post">
+					Login: <input type="text" name="nick" />
+					<br/>
+				Hasło:	<input type="password" name="haslo" />
+					<br/>
+					<input class="submit_button" type="submit" value="Zaloguj sie" />
+				</form>
+        <?php
+        	if(isset($_SESSION['blad']))	echo $_SESSION['blad'];
+        ?>
+
             </div>
         </div>
         <!-- koniec div srodkowa czesc zawartosci -->
         <div id="dolna_czesc_zawartosci"></div>
 
     </div>
+        <!-- koniec div srodkowa czesc zawartosci -->
+        <div id="dolna_czesc_zawartosci"></div>
+
+    </div>
     		<!-- koniec div zawartosc -->
 			<div id="dolna_czesc_strony">
-				<img id="newsletter_icon" src="newsletter_icon.gif" alt="Newsletter Icon" />
+				<img id="newsletter_icon" src="obrazki/newsletter_icon.gif" alt="Newsletter Icon" />
 				<div id="tekst_newsletter">
 					<div id="naglowek_newsletter">Zapisz się do Newslettera i bądź na bieżąco z nowościami :-)</div>
 					<div id="form_newsletter">
@@ -133,15 +127,17 @@
 						</form>
 					</div>
 					<div id="newsletter_info">
-					*Szanujemy Ciebie i tak samo nie lubimy spamu jak Ty, będziemy informowali Cię tylko o samych nowościach. W każdym momencie, możesz wypisać się z Newsletera wysyłając do nas e-mail'a. Dla formalności przyciskając button "Zapisuje się*" akceptujesz nasze <a href="Zasady.html">zasady prywatności</a>.
+					*Szanujemy Ciebie i tak samo nie lubimy spamu jak Ty, będziemy informowali Cię tylko o samych nowościach związanych z <em>Video Kursami</em>. W każdym momencie, możesz wypisać się z Newsletera wysyłając do nas e-mail'a. Dla formalności przyciskając button "Zapisuje się*" akceptujesz nasze <a href="#">zasady prywatności</a>.
 					</div>
 				</div>
 			</div>
 			<!-- koniec dolna_czesc_strony -->
 			<div id="copyright">
-				&copy; 2021, <strong>alepysznee.pl</strong> created by <em>GoodFood BJB</em>
+				&copy; 2021, <strong>alepysznee.pl</strong> created by <em>kto</em>
 			</div>
 		</div>
     <!-- koniec div kontener-->
+    </div>
   </body>
+
 </html>

@@ -20,9 +20,9 @@
             <a href="index.html"><img class="logo" src="gfood.jpg" alt="Logo strony.pl" /></a>
             <div id="gorne_menu">
                 <ul id="wlasciwe_gorne_menu">
-                  <li style="border-left: 1px solid black;"> <a href="logowanie.php"><span class="link"></span>Logowanie</a></li>
-                  <li> <a href="rejestracja.php"><span class="link"></span>Rejestracja</a></li>
-                  <li> <a href="profile.php"><span class="link"></span>Konto</a></li>
+                  <li style="border-left: 1px solid black;"> <a href="logowanie.html"><span class="link"></span>Logowanie</a></li>
+                  <li> <a href="rejestracja.html"><span class="link"></span>Rejestracja</a></li>
+                  <li> <a href="profile.html"><span class="link"></span>Konto</a></li>
 
                 </ul>
             </div>
@@ -75,44 +75,37 @@
     <div id="zawartosc">
         <div id="gorna_czesc_zawartosci"></div>
         <div id="srodkowa_czesc_zawartosci">
-            <div id="menu">
-               <h1> MO.BAR</h1>
-                 <h1>Menu</h1>
+            <div id="tekst">
 
-                <p><b>MO.KACZKA</b></p>
-                <p>burger z szarpaną piersią kaczki, orientalną sałatką, sosem hoisin, majonezem limonkowym, piklowanym zielonym ogórkiem, piklowaną rzodkiewką i szczypiorkiem - 37 PLN</p>
-                <form action="zamowienia.php" method="post">
-                    <input type="checkbox" name="burger" value="wartość">Zaznacz to danie
-                </br>
-                <p>PISTOU</p>
-                <p>wiosenna francuska zupa z sezonowymi warzywami, makaronem, bazyliowym sosem pistou i parmezanem - 24 PLN</p>
-                <input action="zamowienia.php" method="post">
-                    <input type="checkbox" name="zupa" value="wartość">Zaznacz to danie
-                </br>
-                <p>Frytki z batatów - 30 PLN</p></br>
-                <input action="zamowienia.php" method="post">
-                    <input action="zamowienia.php" method="post">
-                        <input type="checkbox" name="frytki" value="wartość">Zaznacz to danie
-                    </br>
-                    <p>Oceń restauracje:</p></br>
-                    <p>Wpisz cyfre od 1 -5 gdzie 1 to ocena słaba 5 znakomita</p>
-                        <body>
-                            <body style="background-color:white">
-                                <input action="zamowienia.php" method="post">
-                                <fieldset>
-                                  <input class="submit_button" type="submit" value="Zapisz" />
+<?php
 
-                        <label for="danie-id">Danie:</label>
-                        <input type="number" size="2" name="ocena" id="danie" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="obsługa-id">Obsługa:</label>
-                        <input type="number" size="2" name="ocena" id="obsługa-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="dostawa-id">Czas dostawy:</label>
-                        <input type="number" size="2" name="ocena" id="dostawa-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <label for="ocena-id">Aktualna ocena użytkowników wynosi:</label>
-                        <input type="number" size="2" name="ocena" id="ocena-id" minlength="1" maxlength="1" pattern="[1-5]{5}" required="required"><br>
-                        <input class="submit_button" type="submit" value="Zapisz" />
+$burger = $_POST['burger'];
+$burger = $_POST['zupa'];
+$burger = $_POST['frytki'];
+$suma = 37*$burger + 24*$zupa + 30*$frytki;
+echo<<<END
 
-                        </form>
+<h2>Twoje Zamówienie</h2>
+<table border="1" cellpadding="10" cellspacing="0">
+<tr>
+<td>burger(37 PLN)</td><td>$burger</td>
+</tr>
+<tr>
+<td>zupa(24 PLN)</td><td>$zupa</td>
+</tr>
+<tr>
+<td>frytki (30 PLN)</td><td>$frytki</td>
+</tr>
+<tr>
+<td>SUMA</td><td>$suma PLN</td>
+</tr>
+</table>
+END;
+
+ ?>
+
+                <p> </p>
+                <p></p>
             </div>
         </div>
         <!-- koniec div srodkowa czesc zawartosci -->

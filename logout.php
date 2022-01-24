@@ -1,10 +1,9 @@
 <?php
 
+	session_start();
 
-require 'includes/config.php';
-require 'includes/header.php';
+	session_unset();
 
-session_destroy();
-echo '<p class="success">Zostałeś wylogowany!  <a href="index.php">stronę główną</a></p>';
+	header('Location: logowanie.php');
 
-require 'includes/footer.php';
+?>
